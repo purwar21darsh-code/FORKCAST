@@ -16,7 +16,7 @@ This is raw material for the required submission feedback field. Only tools and 
 
 **Used for:** dependency installation and lockfiles.
 
-**Worked well:** deterministic lockfiles and `npm.cmd` worked reliably with the local file dependency. This build used `--no-audit` during installation for speed, so it is **not** a substitute for a dependency security audit.
+**Worked well:** deterministic lockfiles and `npm.cmd` worked reliably, first with the local sibling dependency and then with the pinned published GitHub dependency. This build used `--no-audit` during installation for speed, so it is **not** a substitute for a dependency security audit.
 
 **Needs work:** PowerShell execution policy blocked `npm.ps1` on the build machine. Also, npm 11 printed an `allowScripts` warning for esbuild's postinstall even though the build worked. See friction entries FR-001 and FR-005.
 

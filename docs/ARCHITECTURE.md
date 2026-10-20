@@ -14,7 +14,7 @@ The UI never invents a result. Every time, violation, task status and comparison
 
 ```
 FORKCAST-HACKATHON/
-  faultline/                      independent open-source library
+  faultline/                      public open-source library (GitHub)
   forkcast/                       application
     src/
       domain/                     types, seed world, plan construction
@@ -176,7 +176,7 @@ The scheduler is pure: it does not mutate the input world or plan.
 
 ## Fault scenarios and FAULTLINE
 
-Files: `src/engine/scenarios.ts`, `scenario-runner.ts`; library in `../faultline`.
+Files: `src/engine/scenarios.ts`, `scenario-runner.ts`; the library is the published [`faultline-sim`](https://github.com/purwar21darsh-code/faultline) dependency.
 
 Each scenario defines typed fault data, validation and a mutation that receives a private draft state.
 
@@ -345,7 +345,7 @@ Files under `web/src/`.
 - No general natural-language parsing.
 - No hosted demo.
 - Bundle size warning from the MCP SDK dependency.
-- Publishing both repositories and replacing the local file dependency with a released/versioned Git dependency remain manual steps.
+- Published repositories: [FORKCAST](https://github.com/purwar21darsh-code/FORKCAST) and [FAULTLINE](https://github.com/purwar21darsh-code/faultline).
 
 ## Verification evidence
 

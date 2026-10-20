@@ -7,7 +7,7 @@ FORKCAST is a local, deterministic counterfactual planning workstation for a sim
 
 It is not a chatbot and does not ask an LLM to invent times or decide whether a plan is feasible. The browser is a genuine MCP client; the Node backend is a genuine MCP server.
 
-> **Status:** working local demonstration, version 0.1.0. Not deployed, not published, not affiliated with Amazon. The repositories have no public URLs yet. See [docs/PRIMARY_SUBMISSION.md](docs/PRIMARY_SUBMISSION.md) for manual publication fields.
+> **Status:** version 0.1.0, public repository: <https://github.com/purwar21darsh-code/FORKCAST>. Local demonstration, not deployed, not affiliated with Amazon. FAULTLINE is published at <https://github.com/purwar21darsh-code/faultline>.
 
 ---
 
@@ -57,13 +57,13 @@ Browser (React + Vite, port 5173)
            └─ MCP server (McpServer + StreamableHTTPServerTransport)
               ├─ world model + seed
               ├─ deterministic scheduler
-              ├─ FAULTLINE scenario matrix (real local dependency)
+              ├─ FAULTLINE scenario matrix (published Git dependency)
               ├─ bounded repair + independent verification
               ├─ approval tokens + commit service
               └─ atomic local demo persistence
 ```
 
-FORKCAST depends on **FAULTLINE**, the separate sibling repository (local path `../faultline`), through `"faultline-sim": "file:../faultline"`. FAULTLINE is the generic isolated-scenario engine; FORKCAST adds the household model, scheduler, comparisons, repair search, MCP tools and UI.
+FORKCAST depends on **[FAULTLINE](https://github.com/purwar21darsh-code/faultline)**, a separate MIT-licensed repository, through a pinned GitHub dependency: `"faultline-sim": "github:purwar21darsh-code/faultline#ca6f6ae..."`. FAULTLINE is the generic isolated-scenario engine; FORKCAST adds the household model, scheduler, comparisons, repair search, MCP tools and UI.
 
 More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
@@ -82,29 +82,30 @@ If PowerShell blocks `npm.ps1` with an execution-policy error, use `npm.cmd` in 
 
 ## Installation
 
-FAULTLINE must be installed and built first because FORKCAST consumes its built package.
+FORKCAST installs its published FAULTLINE dependency from GitHub, pinned to a commit. A sibling clone is not required for normal installation.
 
 ```bash
+git clone https://github.com/purwar21darsh-code/FORKCAST.git
+cd FORKCAST
+npm ci
+npm test
+npm run build
+```
+
+FAULTLINE can be developed or tested separately:
+
+```bash
+git clone https://github.com/purwar21darsh-code/faultline.git
 cd faultline
-npm install
+npm ci
 npm test
 npm run build
-
-cd ../forkcast
-npm install
-npm test
-npm run build
+npm run example
 ```
 
-From a fresh clone, keep both repositories as siblings:
+On Windows PowerShell where `npm.ps1` is blocked, use `npm.cmd`.
 
-```
-FORKCAST-HACKATHON/
-  faultline/
-  forkcast/
-```
-
-The current `file:../faultline` dependency is intentionally local. The Forkcast README and package manifest document that requirement. Publishing both repositories does not by itself make the dependency resolvable to a stranger unless they also clone both as siblings or the dependency is changed to a Git URL / registry package. That manual publication step is recorded in `docs/OPEN_SOURCE_SUBMISSION.md`.
+The dependency is pinned to the published FAULTLINE commit and package lockfile. To work on both projects simultaneously from source, replace the dependency with the local sibling path for that development session, then restore the pinned dependency before committing.
 
 ### Environment
 

@@ -1,6 +1,6 @@
 # Primary submission draft — FORKCAST
 
-> **Draft only.** Nothing in this file has been submitted. Repository and video URLs are intentionally unset and must be filled after publication and recording. Do not invent links.
+> **Published repository, not yet submitted.** The code repository is public; the demo video URL is still unset. Do not claim submission until Devpost confirms it.
 
 ## Project name
 
@@ -48,7 +48,7 @@ A plan can look correct and still fail when reality changes. Most assistant demo
 - **Simulated Alexa+ experience:** explicitly permitted by the official FAQ. The app is a browser workstation, not an Alexa+ integration.
 - **No gated Alexa+ tooling:** the Category SDK, MCP Toolkit, CLI and Web Simulator are select-partner preview tools and were not used or claimed.
 - **No physical device required.**
-- **Source and setup:** both repositories are local and MIT-licensed; publication remains manual.
+- **Source and setup:** both repositories are public and MIT-licensed: [FORKCAST](https://github.com/purwar21darsh-code/FORKCAST), [FAULTLINE](https://github.com/purwar21darsh-code/faultline). FORKCAST pins FAULTLINE to a published commit.
 
 ## Technical architecture
 
@@ -78,7 +78,7 @@ Node MCP server (4179) /mcp
 - Zod 3.25.76
 - Vitest 5.0.5
 - Playwright 1.64.1 + Chrome
-- FAULTLINE 0.1.0 (local sibling library)
+- FAULTLINE 0.1.0 ([published v0.1.0](https://github.com/purwar21darsh-code/faultline/releases/tag/v0.1.0), pinned Git dependency)
 - MIT license
 
 ### Key modules
@@ -92,7 +92,7 @@ Node MCP server (4179) /mcp
 - `src/engine/commit-preview.ts` — exact local diff and commit application.
 - `src/server/` — MCP, HTTP, store, service.
 - `web/src/` — browser MCP client and UI.
-- `../faultline` — generic open-source scenario matrix.
+- `faultline-sim` — published generic open-source scenario matrix.
 
 ## Innovation and differentiation
 
@@ -136,13 +136,11 @@ Playwright E2E: pass
 FAULTLINE: 13 Vitest tests passing, typecheck and build pass
 ```
 
-The E2E was run against the production build, with a temporary data directory, real Chrome, real MCP server on 4179 and Vite preview on 5173.
+The E2E was run against the production build, with a temporary data directory, real Chrome, real MCP server on 4179 and Vite preview on 5173. A clean clone from the public GitHub repository was also installed, tested and built using the published FAULTLINE Git dependency.
 
 ## Repository URL
 
-**[REQUIRED MANUAL ACTION — no repository has been published. Do not submit this placeholder.]**
-
-Suggested repository name: `forkcast`.
+**<https://github.com/purwar21darsh-code/FORKCAST>**
 
 ## Demo URL
 
@@ -152,7 +150,7 @@ The video must be public, English, on YouTube or Vimeo, and under 3 minutes. See
 
 ## GitHub username
 
-**[REQUIRED MANUAL ACTION — enter your own GitHub username.]**
+**`purwar21darsh-code`**
 
 ## Limitations and future work
 

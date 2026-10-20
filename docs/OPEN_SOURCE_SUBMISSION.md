@@ -1,6 +1,6 @@
 # Open Source mini-challenge draft — FAULTLINE
 
-> **Draft only.** The repository is local. No URL, tag, release, pull request, stars or adoption are claimed.
+> **Published.** The repository and `v0.1.0` release are public. No pull request, stars, adoption or external usage is claimed.
 
 ## Project
 
@@ -8,20 +8,17 @@
 
 ## Repository URL
 
-**[REQUIRED MANUAL ACTION — publish the `faultline/` repository first. Do not invent a URL.]**
-
-Suggested repository name: `faultline`.
+**<https://github.com/purwar21darsh-code/faultline>**
 
 ## Contribution URL
 
 **Not applicable as a pull request.** This is a **new project**, not a contribution to an existing repository. The mini-challenge rules allow a new additional open-source project.
 
-After publication, enter one of:
+Use the tagged release URL as the contribution URL for this new project:
 
-- the repository URL, or
-- a tagged release URL, for example `https://github.com/<user>/faultline/releases/tag/v0.1.0`.
+**<https://github.com/purwar21darsh-code/faultline/releases/tag/v0.1.0>**
 
-Confirm with the Devpost submission form which URL it expects for a new project.
+Confirm with the Devpost submission form whether it prefers the release URL or the repository URL for a new project.
 
 ## HomeFlow repository URL
 
@@ -29,7 +26,7 @@ Confirm with the Devpost submission form which URL it expects for a new project.
 
 ## GitHub username
 
-**[REQUIRED MANUAL ACTION — enter your own GitHub username.]**
+**`purwar21darsh-code`**
 
 ## What was built
 
@@ -46,7 +43,7 @@ FAULTLINE provides:
 - a runnable kitchen task/inventory example;
 - unit tests and API documentation;
 - an MIT license and independent lockfile/package manifest;
-- compatibility with Node.js 20+ and ESM.
+- compatibility with Node.js 20.19+ and ESM.
 
 ## How it works
 
@@ -81,13 +78,14 @@ Agent and workflow developers often test only the happy path. FAULTLINE gives th
 - comparing agent plans before executing them;
 - reusing the same infrastructure in scheduling, logistics, maintenance and automation tools.
 
-FORKCAST consumes FAULTLINE as a real local dependency through `package.json`, not as a copied demonstration.
+FORKCAST consumes FAULTLINE as a real GitHub dependency through `package.json`, pinned to commit `ca6f6ae`, not as a copied demonstration.
 
 ## Reproducible example
 
 ```powershell
+git clone https://github.com/purwar21darsh-code/faultline.git
 cd faultline
-npm.cmd install
+npm.cmd ci
 npm.cmd test
 npm.cmd typecheck
 npm.cmd build
@@ -127,31 +125,30 @@ MIT. The library has no runtime dependencies.
 - The entrant must confirm their own eligibility, age, team status and GitHub ownership.
 - No claim of external adoption, stars, benchmarks, production readiness or third-party usage is made.
 
-## Manual publication steps
+## Publication status
 
-1. Review both repositories for secrets and personal data.
-2. Create a new **public GitHub repository** named `faultline`.
-3. Keep the MIT `LICENSE`, README, package manifest, lockfile, tests and example.
-4. Commit with an independent history (do not nest inside another repository).
-5. Create a version tag, for example `v0.1.0`.
-6. Record the repository URL, tag/contribution URL and GitHub username in this file.
-7. Publish FORKCAST separately and make its FAULTLINE dependency reproducible:
+1. [x] Reviewed both repositories for secrets and personal data.
+2. [x] Created public GitHub repository `purwar21darsh-code/faultline`.
+3. [x] Kept the MIT `LICENSE`, README, package manifest, lockfile, tests and example.
+4. [x] Committed with independent history.
+5. [x] Created and pushed tag `v0.1.0`.
+6. [x] Recorded the repository URL, release/contribution URL and GitHub username.
+7. [x] Published FORKCAST separately and pinned its dependency:
    ```json
-   "faultline-sim": "github:<user>/faultline#v0.1.0"
+   "faultline-sim": "github:purwar21darsh-code/faultline#ca6f6ae670ca10617192834854e738012d923c1d"
    ```
-   or keep the documented clone-both-siblings setup.
-8. Confirm that a clean clone can install and run.
-9. Do not claim the Open Source entry is submitted until Devpost accepts it.
+8. [x] Confirmed that a clean clone can install, test and build.
+9. [ ] Submit the Devpost entry and do not claim acceptance until Devpost confirms.
 
 ## Verification checklist
 
-- [ ] Repository public and MIT licensed.
-- [ ] GitHub username added.
-- [ ] Repository URL added.
-- [ ] Tag/release URL added.
-- [ ] Independent Git history confirmed.
+- [x] Repository public and MIT licensed.
+- [x] GitHub username added.
+- [x] Repository URL added.
+- [x] Tag/release URL added.
+- [x] Independent Git history confirmed.
 - [x] `npm.cmd test` passes from a clean clone (verified 20 Oct 2026).
 - [x] `npm.cmd run example` passes (verified 20 Oct 2026).
-- [ ] FORKCAST installs the published dependency or documents sibling clone.
-- [ ] No fabricated contribution/PR status.
-- [ ] Devpost fields completed manually.
+- [x] FORKCAST installs the published dependency (verified by clean clone).
+- [x] No fabricated contribution/PR status.
+- [ ] Devpost fields completed manually and entry submitted.

@@ -124,13 +124,13 @@ For Alexa+, the rules explicitly call out a single-turn Q&A bot and a basic MCP 
 | Alexa+ track MCP path | Self-hosted MCP server, 2025-11-25, Streamable HTTP | Implemented and tested |
 | Simulated experience permitted | Browser workstation + real MCP client | Implemented and tested |
 | Runtime technology hook | MCP server imported/used; browser initialization/list/call tested | Implemented |
-| Source in repo | Both repositories are local, licensed and documented | Implemented; not published |
-| GitHub hosting | Not done; `gh` CLI unauthenticated | **Manual action required** |
-| Public or shared private repo | Not done | **Manual action required** |
+| Source in repo | Both repositories are public, MIT-licensed and documented | Implemented and published |
+| GitHub hosting | <https://github.com/purwar21darsh-code/FORKCAST> and <https://github.com/purwar21darsh-code/faultline> | Published |
+| Public or shared private repo | Public repositories; no private sharing needed | Published |
 | Demo video | Script prepared | **Manual action required** |
 | Product feedback | `docs/PRODUCT_FEEDBACK.md` | Implemented |
 | Friction log | `docs/FRICTION_LOG.md` | Implemented with observed incidents |
-| Open Source mini challenge | FAULTLINE library | Implemented; URLs/publication manual |
+| Open Source mini challenge | FAULTLINE v0.1.0, <https://github.com/purwar21darsh-code/faultline/releases/tag/v0.1.0> | Published |
 | Test evidence | 39 Vitest tests + Playwright E2E | Implemented and run |
 | Licensing | MIT in both repos | Implemented |
 | Actual MCP usage | Real browser initialize/list/call; protocol tests | Implemented and tested |
@@ -141,9 +141,9 @@ For Alexa+, the rules explicitly call out a single-turn Q&A bot and a basic MCP 
 
 1. **Verify the live rules page and submission UI.** The live rules page is Cloudflare-blocked; the archived official rules confirm the deadline and terms. Re-check before the deadline in case of changes after 1 October 2026.
 2. **Entrant eligibility and age.** The project does not assert or verify them.
-3. **GitHub username, repository URLs, contribution URL.** Not invented. The `gh` CLI is not authenticated. Must be supplied after publication.
+3. **GitHub username, repository URLs, contribution URL.** Published under `purwar21darsh-code`: [FORKCAST](https://github.com/purwar21darsh-code/FORKCAST), [FAULTLINE](https://github.com/purwar21darsh-code/faultline), [v0.1.0 release](https://github.com/purwar21darsh-code/faultline/releases/tag/v0.1.0).
 4. **Private-repo sharing.** If private, invite `chris-trag`, `knmeiss`, `giolaq`, `anishamalde`, `mosesroth`, `emersonsklar` and `testing@devpost.com`, and confirm acceptance before the deadline.
-5. **Published dependency.** FAULTLINE currently uses a sibling `file:../faultline` dependency. For a stranger to install from the FORKCAST repo alone, publish FAULTLINE and use a versioned Git/registry dependency, or document clone-both-siblings.
+5. **Published dependency.** Resolved: FORKCAST pins `faultline-sim` to the published FAULTLINE commit `ca6f6ae` through GitHub. A clean clone installs and builds without a sibling checkout.
 6. **Demo video recording.** Must be under 3:00, public, English, and show the app running with real MCP calls.
 7. **Product feedback completeness.** Update after the final run if any new tool/API is used.
 8. **Open Source "contribution URL".** For a brand-new project, use the repository URL or a tagged release URL. Confirm the form's exact expectation.
@@ -156,11 +156,11 @@ For Alexa+, the rules explicitly call out a single-turn Q&A bot and a basic MCP 
 - [ ] Re-check the live Official Rules while logged in.
 - [ ] Confirm **23 October 2026, 12:00 PM PDT / 24 October 2026, 12:30 AM IST** in the submission UI.
 - [ ] Confirm eligibility, age, residency and team representative status.
-- [ ] Publish both GitHub repositories with the MIT license visible.
-- [ ] Ensure FAULTLINE is installable for judges.
-- [ ] Verify a clean clone can run using the README.
-- [ ] Add the GitHub username and repository URLs to the submission drafts.
-- [ ] If private, invite and confirm all required reviewers, including `chris-trag`.
+- [x] Publish both GitHub repositories with the MIT license visible.
+- [x] Ensure FAULTLINE is installable for judges.
+- [x] Verify a clean clone can run using the README.
+- [x] Add the GitHub username and repository URLs to the submission drafts.
+- [x] Public repositories selected; no private invitations needed.
 - [ ] Record a public English demo under 3:00.
 - [ ] Confirm no unlicensed music/footage/trademarks.
 - [ ] Complete product feedback for every tool/API/SDK.

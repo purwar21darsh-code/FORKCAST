@@ -7,16 +7,11 @@ The demo must show the app running with real MCP calls. Do not splice in pre-rec
 ## Before recording
 
 1. Close other apps using ports 4179 or 5173.
-2. Build FAULTLINE, then FORKCAST:
+2. Install and build FORKCAST. FAULTLINE is fetched from its pinned public Git dependency, so a sibling checkout is not required:
 
 ```powershell
-cd E:\AI\FORKCAST\faultline
-npm.cmd install
-npm.cmd test
-npm.cmd build
-
-cd ..\forkcast
-npm.cmd install
+cd E:\AI\FORKCAST\forkcast
+npm.cmd ci
 npm.cmd test
 npm.cmd build
 ```
