@@ -171,4 +171,4 @@ FORKCAST is an independent hackathon project. It is **not** built by, affiliated
 
 ## Submission status
 
-**Not submitted.** Manual fields above are required.
+**Not submitted.** The verified close is **23 October 2026, 12:00 PM PDT** (24 October 2026, 12:30 AM IST), per an archived official-rules capture; re-check the live submission UI. Manual fields above are required.

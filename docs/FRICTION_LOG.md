@@ -111,9 +111,9 @@ watch: { ignored: ["**/.*.tmpdir/**", "**/*.tmp", "**/data/**"] }
 
 **Actual:** HTTP 403 with "Just a moment... Performing security verification" and a Cloudflare Ray ID. The FAQ and home page were readable through a text-rendering proxy; the rules page was not.
 
-**Severity:** high for compliance verification. The exact deadline timezone and full legal terms remain unverified.
+**Severity:** medium. The initial live-page block prevented direct verification; an archived official-rules capture resolved the deadline and core terms, but the live page remains unreadable.
 
-**Workaround:** use the official home/FAQ, the Devpost listing API for the date range, and mark the deadline time and legal terms as **manual verification required** in `docs/COMPETITION_REQUIREMENTS.md`. Do not assume a timezone.
+**Workaround:** use the official home/FAQ and the Devpost listing API, then read the archived official-rules capture for the deadline and terms. Record that the live page still needs a manual re-check in `docs/COMPETITION_REQUIREMENTS.md`.
 
 **Suggestion:** provide a static, accessible rules page or a documented public API endpoint for the rules; if Cloudflare protection is necessary, ensure logged-in participants can access a plain-text version.
 
@@ -149,4 +149,4 @@ watch: { ignored: ["**/.*.tmpdir/**", "**/*.tmp", "**/data/**"] }
 
 ## Honest summary
 
-Five real incidents were observed. None involved a fake error, a manufactured defect or a fabricated vendor response. The most consequential is FR-004 because it prevents full verification of competition timing; the entrant must check the rules manually before submitting.
+Five real incidents were observed. None involved a fake error, a manufactured defect or a fabricated vendor response. The most consequential is FR-004 because it blocks direct access to the live rules. An archived official capture resolved the deadline and core terms, but the entrant must still re-check the live submission UI before submitting.

@@ -1,97 +1,121 @@
 # Competition requirements verification
 
-**Verified:** 20 October 2026 (Asia/Calcutta), roughly four days before the listed submission close.
+**Verified:** 20 October 2026 (Asia/Calcutta).  
+**Deadline found:** Friday, 23 October 2026 at **12:00 PM Pacific Daylight Time (PDT)** — **24 October 2026, 12:30 AM IST** in the entrant's current timezone.  
+**Submission period:** Monday, 31 August 2026, 10:15 AM PT – Friday, 23 October 2026, 12:00 PM PT.
 
-This document distinguishes what was actually read from official/primary sources from what remains unresolved. The full Official Rules page was blocked by Cloudflare during automated verification, so this is **not** a substitute for the entrant reading the rules before submitting.
+The live `/rules` page still returns a Cloudflare 403 challenge. The rules below were read from an archived capture of the official rules on the official Devpost domain, captured **1 October 2026** and matching the 12 September 2026 capture. The archived page header also displayed "Deadline: Oct 23, 2026 @ 12:00pm PDT". The entrant must still re-check the live submission UI before submitting.
 
 ## Sources
 
 | Source | What it is | Access result |
 | --- | --- | --- |
-| <https://amazonappdev2026.devpost.com/> | Official hackathon home | Read through a text-rendering proxy; Cloudflare blocked a direct browser fetch. |
+| <https://amazonappdev2026.devpost.com/> | Official hackathon home | Read through a text-rendering proxy; Cloudflare blocks direct browser access. |
 | <https://amazonappdev2026.devpost.com/details/faqs> | Official FAQ | Read through a text-rendering proxy. |
-| <https://amazonappdev2026.devpost.com/rules> | Official Rules | **Blocked:** HTTP 403, "Just a moment" Cloudflare challenge, including a real Chrome attempt. Unresolved. |
-| <https://devpost.com/api/hackathons?search=build%20ship%20shape> | Devpost public listing API | Returned listing with submission period **Aug 31 – Oct 23, 2026** and "4 days left" on 20 Oct 2026. |
+| <https://amazonappdev2026.devpost.com/rules> | Official Rules (live) | **Blocked:** HTTP 403 "Just a moment" Cloudflare challenge, including a real Chrome attempt. |
+| <https://web.archive.org/web/20261001091311id_/https://amazonappdev2026.devpost.com/rules> | Archived official rules page on the official domain, 1 October 2026 | Read; deadline, eligibility, submission terms, judging and video rules extracted. |
+| <https://web.archive.org/web/20260912015439id_/https://amazonappdev2026.devpost.com/rules> | Earlier official rules capture, 12 September 2026 | Read; same deadline and core rules. |
+| <https://devpost.com/api/hackathons?search=build%20ship%20shape> | Devpost public listing API | Returned **Aug 31 – Oct 23, 2026** and "4 days left" on 20 October 2026. |
 | <https://github.com/modelcontextprotocol/typescript-sdk/tree/v1.x> | Official MCP TypeScript SDK v1 README | Read; v1.32.1 implements MCP **2025-11-25**. |
-| <https://modelcontextprotocol.io/specification/2025-11-25> | MCP specification | Requirement target named by the hackathon page. |
-| <https://github.com/modelcontextprotocol/typescript-sdk> | SDK main branch | v2 packages implement the later 2026-07-28 spec; this project intentionally uses v1.32.1 for the track's 2025-11-25 requirement. |
+| <https://modelcontextprotocol.io/specification/2025-11-25> | MCP specification | Required target named in the rules. |
+| <https://github.com/modelcontextprotocol/typescript-sdk> | SDK main branch | v2 packages implement 2026-07-28; this project intentionally uses v1.32.1 for the track's required 2025-11-25 spec. |
 
 ## Verified requirements
 
-### Event and deadline
+### Dates and timing
 
-- Event: **Build, Ship, Shape: Amazon Developer Hackathon**.
-- Submission period from the Devpost listing API: **August 31, 2026 – October 23, 2026**.
-- On 20 October 2026 the listing displayed **"4 days left"**.
-- **Deadline time and timezone were not verified.** The Official Rules page was inaccessible. Do not assume 23:59 in any particular zone. The entrant must verify the exact close time in the Devpost submission UI and Official Rules before submitting.
-- FAQ says judging runs **November 9–20** (the year implied by the current cycle).
-- Winners announced: no, at verification time.
+- Submission Period: **31 August 2026, 10:15 AM PT – 23 October 2026, 12:00 PM PT**.
+- Deadline header on the official page: **Oct 23, 2026 @ 12:00pm PDT**.
+- In **Asia/Calcutta**, that is **24 October 2026, 12:30 AM IST**. The entrant must re-check this in the Devpost submission UI in case the live rules changed after the archive date.
+- Judging Period: **9 November 2026, 12:00 PM PT – 20 November 2026, 12:00 PM PT**.
+- Winners announced: on or around **3 December 2026, 12:00 PM PT**.
+- AWS credit request deadline in the archived rules: **21 October 2026, 12:00 PM PT** (not used by this project).
 
 ### Entrant and team
 
-- Open to individuals worldwide except residents of a country, state, province or territory where U.S. or local law prohibits participation or receiving a prize.
-- FAQ explicitly names **Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea**, plus other comprehensively OFAC-sanctioned countries.
-- No maximum team size in the FAQ. A team designates a Representative to submit.
-- This build does not assert or verify the user's age, residency, eligibility or team status. Those are manual checks.
+- Open to individuals at least the **age of majority where they reside** at entry.
+- Open to teams of Eligible Individuals and to qualifying organizations.
+- A team or organization must appoint one authorized **Representative** to submit and act on its behalf.
+- Not open to residents/domiciliaries of prohibited jurisdictions; named examples include **Brazil, Quebec, Russia, Crimea, Cuba, Iran, North Korea** and other comprehensively OFAC-sanctioned countries.
+- Not open to promotion entities, their employees/agents and immediate family/household, judges, related affiliates, or conflicts of interest.
+- Multiple submissions are allowed, but each must be unique and substantially different.
+- This build does not assert or verify the user's age, residency, eligibility, team status or representative authority. Those are manual checks.
 
-### Alexa+ track
+### Project requirements
 
-From the official home and FAQ:
+- Build or significantly update a working application using the required developer tools for the chosen track.
+- **Alexa+:** build a working **Agent Skill** or **self-hosted MCP server** implementing **MCP 2025-11-25 or later** over **Streamable HTTP**. Optionally simulate the Alexa+ experience in a web app using the entrant's own agentic tools.
+- A simulated experience is explicitly allowed. It is exempt from the runtime-technology-hook requirement, but the repository must include the simulation's source code and the video must clearly show it.
+- The repository must demonstrate the track technology at runtime in code — imported and actually called — for Alexa+, Bee and Ring; Fire TV is the device exception.
+- The project must be shown functioning in the demo video, as described in the submission.
+- The project must be new, or significantly updated after the start of the Submission Period. FORKCAST and FAULTLINE are new.
+- Third-party SDKs, APIs and data must be used in accordance with their licenses and terms.
+- The project must be accessible to judges for testing/evaluation free of charge until judging ends.
 
-- Build a **self-hosted MCP server** using MCP **spec 2025-11-25 or later** with **Streamable HTTP**, or an **Agent Skill**.
-- A **simulated Alexa+ experience** is explicitly permitted.
-- The gated Alexa+ developer tools (Category SDK, MCP Toolkit, CLI, Web Simulator) are **preview/select-partner only**; hackathon participants cannot apply for access. They are not required.
-- A browser page acting as an **actual MCP client** — sending initialize, tools-list and tools-call over Streamable HTTP — satisfies the simulated-experience path.
+### Alexa+ compliance for this build
+
+- **FORKCAST uses MCP 2025-11-25 over Streamable HTTP**, with the official TypeScript SDK 1.32.1.
+- **The browser is an actual MCP client:** initialization, tools/list and tools/call are observable in the UI and tested.
+- The app is explicitly described as a **simulated household experience**, not an Alexa+ integration.
+- No gated Alexa+ Category SDK, MCP Toolkit, CLI or Web Simulator was used or accessed.
 - No physical Alexa device is required.
-- For Alexa+, the repository must show the MCP server or Agent Skill actually being used. The source code must be included for a simulated experience.
-- A locally runnable public repo plus demo video is enough for judging; hosting is not required.
-- The MCP server does not have to stay running after submission.
-
-**FORKCAST compliance:** it uses the official TypeScript SDK 1.32.1, negotiates MCP 2025-11-25 over Streamable HTTP at `/mcp`, and the browser is a real SDK client. The demo is explicitly a simulated household experience, not an Alexa+ integration.
+- The local repository includes both the MCP server and browser simulation source.
+- Hosting is not required; a locally runnable repository plus video is sufficient.
 
 ### Submission artefacts
 
-Verified from the official home/FAQ:
+- Text description explaining features and how it works.
+- **GitHub code repository** containing all necessary source, assets and instructions. GitLab or another host is explicitly not accepted.
+- Repository must be **public with an open-source license visible at the top of the repository page**, or **private and shared** with `testing@devpost.com` and all listed Amazon reviewers.
+- Archived rules reviewer usernames: **`chris-trag`**, `knmeiss`, `giolaq`, `anishamalde`, `mosesroth`, `emersonsklar`. The FAQ also lists five of these; include `chris-trag` for the current rules.
+- Private invitations must be accepted before the deadline; GitHub invitations expire after 7 days.
+- Demo video: **under 3 minutes**, public on **YouTube or Vimeo**, English, showing the project functioning on its intended platform; no unlicensed third-party trademarks, music or footage.
+- Product feedback for each tool/API/SDK used: purpose, what worked, what needs work, onboarding, and whether the developer would use it again.
+- Identify primary track(s) and mini challenge(s).
+- Open Source mini challenge requires contribution URL, project repository URL, GitHub username, and a description of what was done, how it works and why it matters.
+- Optional feature requests and optional friction-log entries; friction logs can earn up to a **10% bonus** in Stage 1/Stage 2 judging.
+- All materials must be in English (or have an English translation).
+- Submission must be original work, solely owned by the entrant/team/organization, and not violate IP or privacy rights.
+- A project must not have been developed with financial or preferential support from the Sponsor or Administrator.
 
-- A text description explaining what the project does and how it works.
-- A **GitHub** code repository. GitLab or another host is explicitly not accepted.
-- Repository must contain all source, assets and instructions to run.
-- Repository must be public with an open-source license file, **or** private and shared with the listed Amazon reviewers and `testing@devpost.com`.
-- Private sharing must be done through GitHub collaborator invitations; invitations expire after 7 days. Reviewer usernames listed: `knmeiss`, `giolaq`, `anishamalde`, `mosesroth`, `emersonsklar`.
-- A **demo video under 3 minutes**, public, English, on YouTube or Vimeo. Judges are not required to watch past 3:00.
-- Product feedback on every tool, API or SDK actually used: what it was used for, what worked, what needs work, onboarding, and whether the developer would use it again.
-- Track(s) and mini challenge(s) being entered.
-- If the project existed before the hackathon, a clear account of what changed during the submission window. FORKCAST and FAULTLINE are new projects created during this build.
-- Optional feature requests and optional friction-log entries; friction logs can earn up to a **10% judging bonus** according to the home page.
+### Judging criteria
+
+Stage One is pass/fail viability: fit with the theme and reasonable use of required APIs/SDKs.
+
+Stage Two uses **four equally weighted criteria**:
+
+1. **Tech Implementation** — how well it is built and how effectively it uses the required technology.
+2. **Design** — complete, coherent product experience and intuitive interaction model.
+3. **Potential Impact** — credible, specific customer need and realistic audience.
+4. **Quality of the Idea** — creative, imaginative use of the tools and genuine ecosystem/user understanding.
+
+For Alexa+, the rules explicitly call out a single-turn Q&A bot and a basic MCP wrapper as obvious; agentic workflows, context-aware state across sessions and richer capabilities are described as more creative. FORKCAST's counterfactual branch/repair/approval model is intended to sit in the latter category without overstating it.
 
 ### Open Source mini challenge
 
-Verified from the official home:
-
-- Ship a **new, additional open-source project** (with an open-source license) **or** a contribution (branch, fork or pull request) to a public repository **during the hackathon window**, alongside the primary-track submission.
-- A PR does not need to be merged; an unmerged fork is acceptable.
-- Include the **contribution URL**, **repository URL**, **GitHub username**, and a short description of what was done, how it works and why it matters.
-
-**FORKCAST/FAULTLINE compliance:** FAULTLINE is a new, separate MIT-licensed library built during this cycle and consumed as a real dependency by FORKCAST. Repository and contribution URLs remain unset until the user publishes them. This document does not invent those URLs.
+- Create a **new, additional open-source project** (with an open-source license), or contribute to an existing public repository, during the hackathon window.
+- Contributions can be a new repo, branch, fork or pull request; PRs do not need to be merged.
+- Required fields: contribution URL, project repository URL, GitHub username, and a description of what was done, how it works and why it matters.
+- FAULTLINE is a new, separate MIT-licensed library. FORKCAST uses it as a real dependency. Repository and contribution URLs remain unset until the user publishes them. No URL, PR, stars or adoption is invented.
 
 ### Licensing
 
-- An open-source license file is required for a public repository.
-- MIT was selected for both projects. It is compatible with the included code and the MIT-licensed MCP TypeScript SDK.
-- Third-party dependency licenses still need a final manual review before publication. The dependency set is small.
+- A public repository must include a visible open-source license file. MIT was selected for both repositories.
+- The MIT license is compatible with the included MIT-licensed MCP SDK.
+- Third-party dependency licenses still need a final manual review before publication.
 
-### Demo and accessibility
+### Demo, language and accessibility
 
-- Maximum **3 minutes**; public English video on YouTube or Vimeo.
-- No third-party trademarks, copyrighted music or footage without permission.
-- The demo must show the real project, not fake tool results.
-- Accessibility was considered in the UI (keyboard focus, text status labels, reduced motion, responsive mobile/tablet layouts), but no official accessibility requirement beyond the video rules was verified.
+- Maximum **3 minutes**; public, English, YouTube/Vimeo.
+- No third-party trademarks or copyrighted media without permission.
+- Demo must show the real project, not fabricated results.
+- The UI includes keyboard focus, visible focus, accessible names, text status labels, reduced motion and responsive layouts. No separate official accessibility requirement beyond video/submission rules was found.
 
 ### Product feedback and friction
 
-- Product feedback is a required submission field for every tool/API/SDK used.
-- Friction logs are optional but can earn up to 10%.
-- Only real incidents are recorded in this repository. No bugs were manufactured.
+- Product feedback is mandatory for every tool/API/SDK used.
+- Friction logs are optional and can earn up to 10%.
+- Only real incidents are recorded. No bugs were manufactured.
 
 ## Compliance mapping for FORKCAST
 
@@ -99,8 +123,9 @@ Verified from the official home:
 | --- | --- | --- |
 | Alexa+ track MCP path | Self-hosted MCP server, 2025-11-25, Streamable HTTP | Implemented and tested |
 | Simulated experience permitted | Browser workstation + real MCP client | Implemented and tested |
+| Runtime technology hook | MCP server imported/used; browser initialization/list/call tested | Implemented |
 | Source in repo | Both repositories are local, licensed and documented | Implemented; not published |
-| GitHub hosting | Not done | **Manual action required** |
+| GitHub hosting | Not done; `gh` CLI unauthenticated | **Manual action required** |
 | Public or shared private repo | Not done | **Manual action required** |
 | Demo video | Script prepared | **Manual action required** |
 | Product feedback | `docs/PRODUCT_FEEDBACK.md` | Implemented |
@@ -114,33 +139,32 @@ Verified from the official home:
 
 ## Unresolved questions and manual checks
 
-1. **Exact deadline timestamp and timezone.** The listing gives only the date. Verify in the Devpost submission form and Official Rules.
-2. **Full Official Rules.** The page returned Cloudflare 403. The entrant must read the actual rules for eligibility, age, team representative obligations, submission limits, judging criteria, prize/tax terms and license grants.
-3. **Entrant eligibility and age.** Not represented or verified by this project.
-4. **GitHub username, repository URLs, contribution URL.** Not invented. Must be supplied after publication.
-5. **Private-repo sharing.** If private, invite the five Amazon reviewers and `testing@devpost.com`, and confirm invitations are accepted before the deadline.
-6. **Published dependency.** FAULTLINE currently uses a sibling `file:../faultline` dependency. For a stranger to install from the FORKCAST repo alone, publish FAULTLINE and change the dependency to a Git URL or registry package, or instruct clone-both-siblings. This is a reproducibility risk for judging.
-7. **Demo video recording.** Must be under 3:00, public, English, and show the app running with real MCP calls.
-8. **Product feedback completeness.** Update after the final run if any new tool/API is used.
-9. **Open Source "contribution URL".** For a brand-new project, use the repository URL or a tagged release URL. Confirm with the submission form whether it expects a PR URL specifically.
-10. **Existing-project disclosure.** Nothing existed before this build; do not claim a pre-existing project.
-11. **Prize and tax forms.** Not reviewed.
-12. **Amazon affiliation.** FORKCAST is not affiliated with, endorsed by or connected to Amazon. The simulated experience is a local demo.
+1. **Verify the live rules page and submission UI.** The live rules page is Cloudflare-blocked; the archived official rules confirm the deadline and terms. Re-check before the deadline in case of changes after 1 October 2026.
+2. **Entrant eligibility and age.** The project does not assert or verify them.
+3. **GitHub username, repository URLs, contribution URL.** Not invented. The `gh` CLI is not authenticated. Must be supplied after publication.
+4. **Private-repo sharing.** If private, invite `chris-trag`, `knmeiss`, `giolaq`, `anishamalde`, `mosesroth`, `emersonsklar` and `testing@devpost.com`, and confirm acceptance before the deadline.
+5. **Published dependency.** FAULTLINE currently uses a sibling `file:../faultline` dependency. For a stranger to install from the FORKCAST repo alone, publish FAULTLINE and use a versioned Git/registry dependency, or document clone-both-siblings.
+6. **Demo video recording.** Must be under 3:00, public, English, and show the app running with real MCP calls.
+7. **Product feedback completeness.** Update after the final run if any new tool/API is used.
+8. **Open Source "contribution URL".** For a brand-new project, use the repository URL or a tagged release URL. Confirm the form's exact expectation.
+9. **Existing-project disclosure.** Nothing existed before this build; do not claim a pre-existing project.
+10. **Prize and tax forms.** Not reviewed.
+11. **Amazon affiliation.** FORKCAST is not affiliated with, endorsed by or connected to Amazon. The simulated experience is a local demo.
 
 ## Manual submission checklist
 
-- [ ] Read the full Official Rules while logged in.
-- [ ] Confirm the exact deadline in the entrant's timezone.
-- [ ] Confirm eligibility, age and team status.
-- [ ] Publish both GitHub repositories with the MIT license.
-- [ ] Ensure FAULTLINE is installable for judges (public repo and/or versioned Git dependency).
-- [ ] Verify a clean clone can run using the README instructions.
-- [ ] Record the GitHub username and repository URLs in the submission drafts.
-- [ ] If private, invite and confirm the required GitHub reviewers.
+- [ ] Re-check the live Official Rules while logged in.
+- [ ] Confirm **23 October 2026, 12:00 PM PDT / 24 October 2026, 12:30 AM IST** in the submission UI.
+- [ ] Confirm eligibility, age, residency and team representative status.
+- [ ] Publish both GitHub repositories with the MIT license visible.
+- [ ] Ensure FAULTLINE is installable for judges.
+- [ ] Verify a clean clone can run using the README.
+- [ ] Add the GitHub username and repository URLs to the submission drafts.
+- [ ] If private, invite and confirm all required reviewers, including `chris-trag`.
 - [ ] Record a public English demo under 3:00.
 - [ ] Confirm no unlicensed music/footage/trademarks.
-- [ ] Complete product feedback for every tool used.
+- [ ] Complete product feedback for every tool/API/SDK.
 - [ ] Attach the Open Source mini-challenge fields.
 - [ ] Verify no secrets, API keys or personal data are committed.
 - [ ] Confirm the code and claims match the recorded demo.
-- [ ] Submit before the verified deadline.
+- [ ] Submit before the deadline.

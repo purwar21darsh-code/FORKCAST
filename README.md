@@ -231,7 +231,7 @@ Artifacts are written to `artifacts/`. The E2E needs Chrome. Set `PLAYWRIGHT_CHR
 - Single-user local demo. There is no authentication, multi-tenant isolation or hosted deployment.
 - Plans/proposals live in server memory and do not survive a restart; committed demo state and audit events do.
 - The browser bundle includes the official MCP SDK and is ~542 kB minified (161 kB gzip); no code splitting has been added yet.
-- The full Official Rules page was blocked by Cloudflare during development. See [docs/COMPETITION_REQUIREMENTS.md](docs/COMPETITION_REQUIREMENTS.md) for verified facts and unresolved fields.
+- The live Official Rules page was blocked by Cloudflare during development. The deadline and rules were verified from an archived official-rules capture (1 October 2026). Re-check the live submission UI before entering. See [docs/COMPETITION_REQUIREMENTS.md](docs/COMPETITION_REQUIREMENTS.md).
 
 ---
 

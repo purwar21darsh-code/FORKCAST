@@ -94,7 +94,7 @@ FAULTLINE is the reusable part. FORKCAST is a concrete, inspectable application 
 - Single-user local server with no authentication.
 - No hosted deployment.
 - No real calendar, purchase, messaging or device integration.
-- The full Official Rules page could not be verified due Cloudflare; manual submission checks are required.
+- The live Official Rules page is Cloudflare-blocked; the deadline and terms were verified from an archived official-rules capture. Re-check the live submission UI before entering.
 
 ## Honest claim boundary
 

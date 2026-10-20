@@ -123,7 +123,7 @@ MIT. The library has no runtime dependencies.
 
 - Created during the current hackathon cycle (October 20, 2026).
 - The Devpost listing gives a submission period of **August 31 – October 23, 2026**.
-- The exact close time/timezone and the full Official Rules could not be verified because the rules page was blocked by Cloudflare. The entrant must verify before submitting.
+- The archived official rules confirm a close at **23 October 2026, 12:00 PM PDT** (24 October 2026, 12:30 AM IST) and a Submission Period from 31 August 2026. The live rules page was Cloudflare-blocked; the entrant must re-check the live submission UI before submitting.
 - The entrant must confirm their own eligibility, age, team status and GitHub ownership.
 - No claim of external adoption, stars, benchmarks, production readiness or third-party usage is made.
 
@@ -150,8 +150,8 @@ MIT. The library has no runtime dependencies.
 - [ ] Repository URL added.
 - [ ] Tag/release URL added.
 - [ ] Independent Git history confirmed.
-- [ ] `npm.cmd test` passes from a clean clone.
-- [ ] `npm.cmd run example` passes.
+- [x] `npm.cmd test` passes from a clean clone (verified 20 Oct 2026).
+- [x] `npm.cmd run example` passes (verified 20 Oct 2026).
 - [ ] FORKCAST installs the published dependency or documents sibling clone.
 - [ ] No fabricated contribution/PR status.
 - [ ] Devpost fields completed manually.

@@ -94,7 +94,7 @@ This is raw material for the required submission feedback field. Only tools and 
 
 **Worked well:** the FAQ and home page were readable through a text-rendering proxy and answered the Alexa+ simulated-experience question clearly.
 
-**Needs work:** the Official Rules page consistently returned a Cloudflare 403 challenge, even in a real Chrome session. That prevented verification of the exact deadline timezone and full legal terms. See FR-004.
+**Needs work:** the live Official Rules page consistently returned a Cloudflare 403 challenge, even in a real Chrome session. The exact deadline and legal terms were eventually verified from an archived official-rules capture on the official domain. The live page must still be re-checked before submitting. See FR-004.
 
 **Would use again:** required for submission; the user must verify the rules manually.
 
