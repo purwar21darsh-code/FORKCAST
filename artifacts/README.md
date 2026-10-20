@@ -13,3 +13,4 @@ These screenshots were produced by `npm run e2e` against the built FORKCAST serv
 | `e2e-06-tablet.png` | 820 px responsive layout. |
 
 The E2E assertion rejects unexpected browser console errors, page errors and failed network requests. Expected MCP SSE aborts during page reload/restart are filtered.
+| `devpost-cover.png` | 3:2 project cover used on the public Devpost submission. |
