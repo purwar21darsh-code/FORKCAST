@@ -161,7 +161,7 @@ The video must be public, English, on YouTube or Vimeo, and under 3 minutes. See
 - No hosted deployment.
 - No real device, purchase, booking or messaging integration.
 - Bundle-size warning from the MCP SDK.
-- FAULTLINE dependency is local until publication.
+- FAULTLINE is a published Git dependency pinned to a commit.
 
 ## Accurate relationship statement
 

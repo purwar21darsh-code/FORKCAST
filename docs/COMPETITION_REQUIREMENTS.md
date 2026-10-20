@@ -102,7 +102,7 @@ For Alexa+, the rules explicitly call out a single-turn Q&A bot and a basic MCP 
 
 - A public repository must include a visible open-source license file. MIT was selected for both repositories.
 - The MIT license is compatible with the included MIT-licensed MCP SDK.
-- Third-party dependency licenses still need a final manual review before publication.
+- Dependency license review (20 Oct 2026): the lockfiles contain MIT, ISC, BSD, Apache-2.0, CC-BY-4.0 data and MPL-2.0 dev-only packages; no GPL/AGPL. Review notices and attribution requirements before distribution. This is not legal advice.
 
 ### Demo, language and accessibility
 
