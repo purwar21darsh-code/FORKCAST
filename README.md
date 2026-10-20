@@ -63,7 +63,7 @@ Browser (React + Vite, port 5173)
               └─ atomic local demo persistence
 ```
 
-FORKCAST depends on [FAULTLINE](../faultline/README.md) through `"faultline-sim": "file:../faultline"`. FAULTLINE is the generic isolated-scenario engine; FORKCAST adds the household model, scheduler, comparisons, repair search, MCP tools and UI.
+FORKCAST depends on **FAULTLINE**, the separate sibling repository (local path `../faultline`), through `"faultline-sim": "file:../faultline"`. FAULTLINE is the generic isolated-scenario engine; FORKCAST adds the household model, scheduler, comparisons, repair search, MCP tools and UI.
 
 More detail: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
