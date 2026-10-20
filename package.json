@@ -1,0 +1,44 @@
+{
+  "name": "forkcast",
+  "version": "0.1.0",
+  "private": true,
+  "description": "FORKCAST — deterministic household plan stress-testing with a real MCP server and browser MCP client.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c yellow,cyan \"npm:dev:server\" \"npm:dev:web\"",
+    "dev:server": "tsx watch src/server/index.ts",
+    "dev:web": "vite --config vite.config.ts",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build:web": "vite build --config vite.config.ts",
+    "build": "npm run build:server && npm run build:web",
+    "start": "node dist/server/index.js",
+    "start:web": "vite preview --config vite.config.ts --port 5173 --strictPort",
+    "typecheck": "tsc -p tsconfig.server.json --noEmit && tsc -p tsconfig.web.json --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "check": "npm run typecheck && npm run test && npm run build",
+    "e2e": "node scripts/e2e.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "faultline-sim": "file:../faultline",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "24.19.2",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "@vitejs/plugin-react": "5.2.0",
+    "concurrently": "10.0.6",
+    "playwright": "^1.64.1",
+    "tsx": "4.23.15",
+    "typescript": "5.9.3",
+    "vite": "7.3.7",
+    "vitest": "^5.0.5"
+  }
+}
