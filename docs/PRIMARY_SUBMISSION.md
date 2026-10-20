@@ -78,7 +78,7 @@ Node MCP server (4179) /mcp
 - Zod 3.25.76
 - Vitest 5.0.5
 - Playwright 1.64.1 + Chrome
-- FAULTLINE 0.1.0 ([published v0.1.0](https://github.com/purwar21darsh-code/faultline/releases/tag/v0.1.0), pinned Git dependency)
+- FAULTLINE 0.1.0 ([published v0.1.0](https://github.com/purwar21darsh-code/faultline/releases/tag/v0.1.0), pinned release tarball)
 - MIT license
 
 ### Key modules
@@ -161,7 +161,7 @@ The video must be public, English, on YouTube or Vimeo, and under 3 minutes. See
 - No hosted deployment.
 - No real device, purchase, booking or messaging integration.
 - Bundle-size warning from the MCP SDK.
-- FAULTLINE is a published Git dependency pinned to a commit.
+- FAULTLINE is a published release artifact pinned by the lockfile.
 
 ## Accurate relationship statement
 

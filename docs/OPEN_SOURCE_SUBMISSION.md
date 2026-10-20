@@ -78,7 +78,7 @@ Agent and workflow developers often test only the happy path. FAULTLINE gives th
 - comparing agent plans before executing them;
 - reusing the same infrastructure in scheduling, logistics, maintenance and automation tools.
 
-FORKCAST consumes FAULTLINE as a real GitHub dependency through `package.json`, pinned to commit `ca6f6ae`, not as a copied demonstration.
+FORKCAST consumes FAULTLINE as a real versioned GitHub release artifact through `package.json`, not as a copied demonstration.
 
 ## Reproducible example
 
@@ -135,7 +135,7 @@ MIT. The library has no runtime dependencies.
 6. [x] Recorded the repository URL, release/contribution URL and GitHub username.
 7. [x] Published FORKCAST separately and pinned its dependency:
    ```json
-   "faultline-sim": "github:purwar21darsh-code/faultline#ca6f6ae670ca10617192834854e738012d923c1d"
+   "faultline-sim": "https://github.com/purwar21darsh-code/faultline/releases/download/v0.1.0/faultline-sim-0.1.0.tgz"
    ```
 8. [x] Confirmed that a clean clone can install, test and build.
 9. [ ] Submit the Devpost entry and do not claim acceptance until Devpost confirms.

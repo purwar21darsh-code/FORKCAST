@@ -143,7 +143,7 @@ For Alexa+, the rules explicitly call out a single-turn Q&A bot and a basic MCP 
 2. **Entrant eligibility and age.** The project does not assert or verify them.
 3. **GitHub username, repository URLs, contribution URL.** Published under `purwar21darsh-code`: [FORKCAST](https://github.com/purwar21darsh-code/FORKCAST), [FAULTLINE](https://github.com/purwar21darsh-code/faultline), [v0.1.0 release](https://github.com/purwar21darsh-code/faultline/releases/tag/v0.1.0).
 4. **Private-repo sharing.** If private, invite `chris-trag`, `knmeiss`, `giolaq`, `anishamalde`, `mosesroth`, `emersonsklar` and `testing@devpost.com`, and confirm acceptance before the deadline.
-5. **Published dependency.** Resolved: FORKCAST pins `faultline-sim` to the published FAULTLINE commit `ca6f6ae` through GitHub. A clean clone installs and builds without a sibling checkout.
+5. **Published dependency.** Resolved: FORKCAST pins `faultline-sim` to the published FAULTLINE v0.1.0 release tarball. A clean clone installs and builds without a sibling checkout or SSH credentials.
 6. **Demo video recording.** Must be under 3:00, public, English, and show the app running with real MCP calls.
 7. **Product feedback completeness.** Update after the final run if any new tool/API is used.
 8. **Open Source "contribution URL".** For a brand-new project, use the repository URL or a tagged release URL. Confirm the form's exact expectation.
